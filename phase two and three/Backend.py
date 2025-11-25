@@ -1,4 +1,7 @@
 import os
+# Suppress TensorFlow informational logs and enforce consistent operation
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
 import shutil
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from pydantic import BaseModel
